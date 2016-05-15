@@ -1,0 +1,47 @@
+---
+title: "Codebook"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+load(file="summary_data.RData")
+load(file="ActivityNames.RData")
+load(file="Features_tbl.RData")
+```
+
+# This code book is to support the run_analysis R script
+
+1. Installs packages and sets directory references
+2. Read input files into R
+3. Adds labels and variable names
+4. Merges and reshapes data
+5. Outputs a summary dataset meeting tidy data rules
+
+# Pulling variables of interest
+
+Full List of feature names that met mean and standard deviation condition:
+``` {r eval_TRUE}
+print(Features_tbl)
+```
+
+ Full List of activity names:
+``` {r1 eval_TRUE}
+print(ActivityNames)
+```
+
+Range of Subject
+``` {r3 eval_TRUE}
+range(summary_data$subject)
+```
+
+# Tidy Data Set
+
+``` {r4 eval_TRUE}
+str(summary_data)
+```
+
+``` {r2 eval_TRUE}
+head(summary_data)
+```
+
